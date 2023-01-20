@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to right, gray, darkblue);
+}
+.box {
+  width: 400px;
+  height: 400px;
+  /* border: 2px solid black; */
+  position: relative;
+  margin: 200px auto;
+}
+.box > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 100%,
+    50% 80%,
+    80% 10%,
+    20% 10%,
+    50% 80%,
+    50% 100%
+  );
+}
+
+.box > div:nth-of-type(1) {
+  background-color: #c5065c;
+}
+
+.box > div:nth-of-type(2) {
+  background-color: #569a8cd7;
+  left: 40%;
+}
